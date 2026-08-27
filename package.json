@@ -6,14 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seed": "tsx scripts/seedSupabase.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "dotenv": "^17.4.2",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "vite": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tsx": "^4.23.12"
+  }
 }
