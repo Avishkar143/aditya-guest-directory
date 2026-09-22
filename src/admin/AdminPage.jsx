@@ -1,5 +1,4 @@
 import {
-  Bell,
   Building2,
   ChevronRight,
   Home,
@@ -20,7 +19,6 @@ import { supabase } from '../lib/supabase.js';
 
 import AdminDashboard from './AdminDashboard.jsx';
 import AdminHotel from './AdminHotel.jsx';
-import NoticeManager from './NoticeManager.jsx';
 import PlacesManager from './PlacesManager.jsx';
 import MenuManager from './MenuManager.jsx';
 
@@ -280,11 +278,6 @@ function AdminLogin({
       );
 
 
-      /*
-       * Don't expose unnecessary
-       * Supabase details to guests.
-       */
-
       setError(
         'Invalid email or password.'
       );
@@ -341,7 +334,7 @@ function AdminLogin({
           <p className="admin-login-description">
 
             Sign in to manage the guest directory,
-            hotel information, notices, places and menus.
+            hotel information, places and menus.
 
           </p>
 
@@ -541,13 +534,6 @@ function AuthenticatedAdmin({
     },
 
     {
-      id: 'notices',
-      label: 'Notices',
-      description: 'Guest announcements',
-      icon: Bell,
-    },
-
-    {
       id: 'places',
       label: 'Places to Visit',
       description: 'Nashik recommendations',
@@ -663,13 +649,6 @@ function AuthenticatedAdmin({
 
         return (
           <AdminHotel />
-        );
-
-
-      case 'notices':
-
-        return (
-          <NoticeManager />
         );
 
 

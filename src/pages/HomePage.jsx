@@ -31,7 +31,6 @@ import { supabase } from '../lib/supabase.js';
 // Tables used:
 //   hotels
 //   staff
-//   notices
 //   restaurants
 //   city_places
 //
@@ -51,8 +50,6 @@ export default function HomePage() {
   const [staff, setStaff] = useState(null);
 
   const [restaurants, setRestaurants] = useState([]);
-
-  const [notices, setNotices] = useState([]);
 
   const [places, setPlaces] = useState([]);
 
@@ -123,37 +120,6 @@ export default function HomePage() {
       setStaff(data || null);
 
       return data;
-
-    },
-    []
-  );
-
-
-  // =======================================================
-  // LOAD NOTICES
-  // =======================================================
-
-  const loadNotices = useCallback(
-    async () => {
-
-      const {
-        data,
-        error,
-      } = await supabase
-        .from('notices')
-        .select('*')
-        .eq('is_active', true)
-        .order('display_order', {
-          ascending: true,
-        });
-
-      if (error) {
-        throw error;
-      }
-
-      setNotices(data || []);
-
-      return data || [];
 
     },
     []
@@ -260,7 +226,6 @@ export default function HomePage() {
           await Promise.all([
             loadHotel(),
             loadStaff(),
-            loadNotices(),
             loadRestaurants(),
             loadPlaces(),
           ]);
@@ -287,7 +252,6 @@ export default function HomePage() {
       [
         loadHotel,
         loadStaff,
-        loadNotices,
         loadRestaurants,
         loadPlaces,
       ]
@@ -307,11 +271,6 @@ export default function HomePage() {
 
   // =======================================================
   // REALTIME UPDATES
-  // =======================================================
-  //
-  // Whenever Admin changes any relevant table,
-  // refresh the Home Page automatically.
-  //
   // =======================================================
 
   useEffect(() => {
@@ -343,18 +302,6 @@ export default function HomePage() {
           },
           () => {
             loadStaff();
-          }
-        )
-
-        .on(
-          'postgres_changes',
-          {
-            event: '*',
-            schema: 'public',
-            table: 'notices',
-          },
-          () => {
-            loadNotices();
           }
         )
 
@@ -396,7 +343,6 @@ export default function HomePage() {
   }, [
     loadHotel,
     loadStaff,
-    loadNotices,
     loadRestaurants,
     loadPlaces,
   ]);
@@ -705,8 +651,7 @@ export default function HomePage() {
 
 
           <h1>
-            {staff?.welcome_message ||
-              'Hi, how can I help you?'}
+            Namaste Sir/Ma’am, How Can I assist you?
           </h1>
 
 
@@ -806,84 +751,6 @@ export default function HomePage() {
           </button>
 
         </section>
-
-
-        {/* =================================================
-            NOTICES
-            ================================================= */}
-
-        {notices.length > 0 && (
-
-          <section
-            className="content-section notice-section"
-          >
-
-            <div className="section-heading">
-
-              <span className="heading-icon">
-
-                <BellRing size={18} />
-
-              </span>
-
-
-              <div>
-
-                <span className="eyebrow">
-                  HOTEL UPDATE
-                </span>
-
-                <h2>
-                  Notices
-                </h2>
-
-              </div>
-
-            </div>
-
-
-            <div className="notice-stack">
-
-              {notices.map(
-                (notice) => (
-
-                  <article
-                    className="notice-card"
-                    key={notice.id}
-                  >
-
-                    <div className="notice-card-icon">
-
-                      <BellRing
-                        size={18}
-                      />
-
-                    </div>
-
-
-                    <div>
-
-                      <strong>
-                        {notice.title}
-                      </strong>
-
-
-                      <p>
-                        {notice.message}
-                      </p>
-
-                    </div>
-
-                  </article>
-
-                )
-              )}
-
-            </div>
-
-          </section>
-
-        )}
 
 
         {/* =================================================
@@ -1078,7 +945,6 @@ export default function HomePage() {
 
           <div className="contact-grid">
 
-
             {/* CALL */}
 
             <button
@@ -1122,9 +988,7 @@ export default function HomePage() {
               className="contact-card"
               onClick={whatsapp}
               type="button"
-              disabled={
-                !staff?.whatsapp
-              }
+              disabled={!staff?.whatsapp}
             >
 
               <span className="contact-icon whatsapp">
@@ -1231,12 +1095,9 @@ export default function HomePage() {
           onMouseDown={(event) => {
 
             if (
-              event.target ===
-              event.currentTarget
+              event.target === event.currentTarget
             ) {
-
               setShowRequest(false);
-
             }
 
           }}
@@ -1248,6 +1109,8 @@ export default function HomePage() {
             aria-modal="true"
             aria-labelledby="request-title"
           >
+
+            {/* CLOSE */}
 
             <button
               className="modal-close"
@@ -1263,6 +1126,8 @@ export default function HomePage() {
             </button>
 
 
+            {/* ICON */}
+
             <div className="modal-icon">
 
               <BellRing size={21} />
@@ -1270,58 +1135,34 @@ export default function HomePage() {
             </div>
 
 
+            {/* LABEL */}
+
             <span className="eyebrow">
               PERSONAL ASSISTANCE
             </span>
 
 
+            {/* TITLE */}
+
             <h2 id="request-title">
-              How can we help?
+              At Your Service
             </h2>
 
 
+            {/* MESSAGE */}
+
             <p className="modal-copy">
 
-              Choose what you need and our
-              guest assistance team will
-              help you with your request.
+              For any further assistance or to make
+              your stay more comfortable, please feel
+              free to contact At Your Service by simply
+              dialing <strong>0</strong> from your room
+              telephone. We’ll be delighted to assist you.
 
             </p>
 
 
-            <div className="request-options">
-
-              {[
-                'Room assistance',
-                'Housekeeping',
-                'Food & beverage',
-                'Other',
-              ].map(
-                (option) => (
-
-                  <button
-                    key={option}
-                    type="button"
-                    onClick={() =>
-                      setShowRequest(false)
-                    }
-                  >
-
-                    <span>
-                      {option}
-                    </span>
-
-                    <ChevronRight
-                      size={16}
-                    />
-
-                  </button>
-
-                )
-              )}
-
-            </div>
-
+            {/* HOTEL SERVICE NOTE */}
 
             <div className="future-note">
 
@@ -1329,8 +1170,9 @@ export default function HomePage() {
                 ✓
               </span>
 
-              Request management can be
-              connected to the Admin Panel
+              <span>
+                Our team will be delighted to assist you.
+              </span>
 
             </div>
 
@@ -1341,5 +1183,7 @@ export default function HomePage() {
       )}
 
     </main>
+
   );
+
 }

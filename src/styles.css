@@ -63,16 +63,29 @@
 
 html {
   min-width: 320px;
+
   background: var(--cream);
-  font-family: "Times New Roman", Times, serif;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+
   min-width: 320px;
+
   background: var(--cream);
-  font-family: "Times New Roman", Times, serif;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
   color: var(--text);
 }
 
@@ -133,6 +146,7 @@ a {
 
 .page-shell {
   width: min(100%, 680px);
+
   margin: 0 auto;
 
   padding:
@@ -152,6 +166,7 @@ a {
 
 .topbar {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
@@ -165,6 +180,7 @@ a {
 
 .brand-lockup {
   display: flex;
+
   align-items: center;
 
   gap: 9px;
@@ -178,7 +194,10 @@ a {
 
   flex: 0 0 30px;
 
-  border: 1px solid #b59b63;
+  border:
+    1px solid
+    #b59b63;
+
   border-radius: 50%;
 
   display: grid;
@@ -200,6 +219,7 @@ a {
 .brand-lockup strong,
 .brand-lockup span {
   display: block;
+
   line-height: 1;
 }
 
@@ -207,15 +227,19 @@ a {
   max-width: 290px;
 
   overflow: hidden;
+
   text-overflow: ellipsis;
+
   white-space: nowrap;
 
   font-size: 11px;
+
   letter-spacing: 0.12em;
 }
 
 .brand-lockup div span {
   font-size: 7px;
+
   letter-spacing: 0.23em;
 
   color: #927c4f;
@@ -227,6 +251,7 @@ a {
   flex: 0 0 auto;
 
   display: flex;
+
   align-items: center;
 
   gap: 7px;
@@ -270,6 +295,7 @@ a {
 .eyebrow,
 .admin-eyebrow {
   font-size: 9px;
+
   letter-spacing: 0.19em;
 
   font-weight: 700;
@@ -368,6 +394,7 @@ a {
   place-items: center;
 
   background: #c9ae70;
+
   color: #17333c;
 
   font-weight: 700;
@@ -386,6 +413,7 @@ a {
 
 .welcome-card .eyebrow {
   position: relative;
+
   z-index: 1;
 
   color: #d0c09a;
@@ -393,6 +421,7 @@ a {
 
 .welcome-card h1 {
   position: relative;
+
   z-index: 1;
 
   max-width: 530px;
@@ -403,6 +432,7 @@ a {
     11px;
 
   font-size: 30px;
+
   line-height: 1.2;
 
   font-weight: 600;
@@ -410,6 +440,7 @@ a {
 
 .welcome-card p {
   position: relative;
+
   z-index: 1;
 
   max-width: 500px;
@@ -420,14 +451,17 @@ a {
     rgba(255, 255, 255, 0.72);
 
   font-size: 13px;
+
   line-height: 1.6;
 }
 
 .welcome-chip {
   position: relative;
+
   z-index: 1;
 
   display: inline-flex;
+
   align-items: center;
 
   gap: 8px;
@@ -483,6 +517,7 @@ a {
   min-width: 0;
 
   display: flex;
+
   align-items: center;
 
   gap: 10px;
@@ -541,6 +576,7 @@ a {
   border-radius: 11px;
 
   background: #eee7d8;
+
   color: var(--gold-dark);
 }
 
@@ -550,6 +586,7 @@ a {
   flex: 1;
 
   display: grid;
+
   gap: 3px;
 }
 
@@ -580,6 +617,7 @@ a {
 
 .section-heading {
   display: flex;
+
   align-items: center;
 
   gap: 11px;
@@ -602,6 +640,7 @@ a {
   place-items: center;
 
   background: #e9e2d3;
+
   color: #7b6843;
 }
 
@@ -639,6 +678,7 @@ a {
   min-height: 80px;
 
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -693,10 +733,13 @@ a {
   border-radius: 14px;
 
   background: #f1ede2;
+
   color: #796541;
 
   font-size: 12px;
+
   letter-spacing: 0.05em;
+
   font-weight: 700;
 }
 
@@ -718,6 +761,7 @@ a {
   white-space: nowrap;
 
   font-size: 15px;
+
   font-weight: 700;
 }
 
@@ -739,92 +783,8 @@ a {
   place-items: center;
 
   background: #f6f4ef;
+
   color: #8a8e8f;
-}
-
-
-/* =========================================================
-   NOTICE SECTION
-   ========================================================= */
-
-.notice-section {
-  margin-top: 24px;
-}
-
-.notice-stack {
-  display: grid;
-
-  gap: 9px;
-}
-
-.notice-card {
-  position: relative;
-
-  display: flex;
-  align-items: flex-start;
-
-  gap: 13px;
-
-  padding: 16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.96),
-      rgba(246, 241, 228, 0.96)
-    );
-
-  border:
-    1px solid
-    rgba(167, 138, 85, 0.2);
-
-  border-radius: 18px;
-
-  box-shadow: var(--shadow-sm);
-}
-
-.notice-card-icon {
-  width: 40px;
-  height: 40px;
-
-  flex: 0 0 40px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 12px;
-
-  background: #eee7d8;
-  color: var(--gold-dark);
-}
-
-.notice-card > div:last-child {
-  min-width: 0;
-}
-
-.notice-card strong {
-  display: block;
-
-  color: var(--navy);
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  line-height: 1.35;
-}
-
-.notice-card p {
-  margin:
-    5px
-    0
-    0;
-
-  color: #737e81;
-
-  font-size: 11px;
-
-  line-height: 1.55;
 }
 
 
@@ -838,6 +798,7 @@ a {
   min-height: 82px;
 
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -890,6 +851,7 @@ a {
   border-radius: 13px;
 
   background: #eee7d8;
+
   color: var(--gold-dark);
 }
 
@@ -1003,6 +965,7 @@ a {
   border-radius: 12px;
 
   background: #e9f0ed;
+
   color: #2d6756;
 
   display: grid;
@@ -1011,11 +974,13 @@ a {
 
 .contact-icon.whatsapp {
   background: #e8f2ea;
+
   color: #3b7857;
 }
 
 .contact-icon.request {
   background: #f1eadb;
+
   color: #806b45;
 }
 
@@ -1035,6 +1000,7 @@ a {
   min-height: 83px;
 
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -1063,6 +1029,7 @@ a {
 
 footer {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1102,6 +1069,7 @@ footer i {
   min-height: 280px;
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: center;
@@ -1204,9 +1172,11 @@ footer i {
   min-height: 70vh;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 30px;
@@ -1282,6 +1252,7 @@ footer i {
 
 .inner-header {
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -1314,6 +1285,7 @@ footer i {
   flex: 0 0 40px;
 
   display: grid;
+
   place-items: center;
 
   border:
@@ -1447,6 +1419,7 @@ footer i {
 
 .place-meta {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 6px;
@@ -1456,6 +1429,7 @@ footer i {
 
 .place-meta span {
   display: inline-flex;
+
   align-items: center;
 
   padding:
@@ -1485,6 +1459,7 @@ footer i {
   min-height: 36px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1532,6 +1507,7 @@ footer i {
 
 .menu-hero {
   display: flex;
+
   align-items: flex-start;
 
   gap: 15px;
@@ -1584,6 +1560,7 @@ footer i {
   color: var(--gold-dark);
 
   font-size: 8px;
+
   line-height: 1;
 
   letter-spacing: 0.2em;
@@ -1625,7 +1602,9 @@ footer i {
 
 .premium-pdf-link {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   min-height: 44px;
@@ -1692,14 +1671,17 @@ footer i {
     rgba(246, 244, 239, 0.94);
 
   backdrop-filter: blur(12px);
+
   -webkit-backdrop-filter: blur(12px);
 }
 
 .premium-search-box {
   width: 100%;
+
   height: 48px;
 
   display: flex;
+
   align-items: center;
 
   gap: 9px;
@@ -1744,6 +1726,7 @@ footer i {
   height: 46px;
 
   border: 0;
+
   outline: 0;
 
   background: transparent;
@@ -1774,6 +1757,7 @@ footer i {
   color: #777e7f;
 
   display: grid;
+
   place-items: center;
 
   cursor: pointer;
@@ -1826,6 +1810,7 @@ footer i {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 6px;
@@ -1985,7 +1970,9 @@ footer i {
   min-height: 66px;
 
   display: flex;
+
   align-items: flex-start;
+
   justify-content: space-between;
 
   gap: 15px;
@@ -2011,6 +1998,7 @@ footer i {
 
 .menu-item-title {
   display: flex;
+
   align-items: flex-start;
 
   gap: 8px;
@@ -2135,6 +2123,7 @@ footer i {
   height: 46px;
 
   display: grid;
+
   place-items: center;
 
   margin:
@@ -2210,197 +2199,315 @@ footer i {
 
   inset: 0;
 
-  z-index: 50;
+  z-index: 9999;
 
   display: flex;
 
-  align-items: flex-end;
+  align-items: center;
 
   justify-content: center;
 
-  padding: 14px;
+  padding: 24px;
 
   background:
-    rgba(8, 24, 30, 0.48);
+    rgba(18, 25, 28, 0.48);
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  animation:
+    modalBackdropIn 0.22s ease-out;
 }
 
+
+/* =========================================================
+   REQUEST MODAL
+   ========================================================= */
+
 .request-modal {
-  width: min(100%, 560px);
-
-  padding: 22px;
-
   position: relative;
 
-  background: #f8f7f2;
+  width: min(440px, 100%);
 
-  border-radius: 26px;
+  max-height:
+    calc(100vh - 48px);
+
+  overflow-y: auto;
+
+  padding: 32px;
+
+  background: #fbfaf5;
+
+  border:
+    1px solid
+    rgba(125, 103, 62, 0.14);
+
+  border-radius: 24px;
 
   box-shadow:
     0
-    25px
+    30px
     80px
-    rgba(0, 0, 0, 0.22);
+    rgba(0, 0, 0, 0.20),
+    0
+    8px
+    24px
+    rgba(0, 0, 0, 0.08);
 
   animation:
-    sheet 0.2s ease;
+    modalIn 0.25s cubic-bezier(.2, .8, .2, 1);
 }
+
+
+/* =========================================================
+   MODAL CLOSE
+   ========================================================= */
 
 .modal-close {
   position: absolute;
 
-  right: 16px;
-  top: 16px;
+  top: 18px;
+  right: 18px;
 
-  width: 34px;
-  height: 34px;
-
-  border:
-    1px solid
-    rgba(24, 50, 58, 0.09);
-
-  background: #fff;
-
-  border-radius: 11px;
-
-  display: grid;
-  place-items: center;
-
-  cursor: pointer;
-}
-
-.modal-icon {
-  width: 43px;
-  height: 43px;
-
-  border-radius: 13px;
-
-  background: #eee7d7;
-
-  color: #806b45;
-
-  display: grid;
-  place-items: center;
-
-  margin-bottom: 17px;
-}
-
-.request-modal h2 {
-  margin:
-    6px
-    0
-    7px;
-
-  color: var(--navy);
-
-  font-size: 25px;
-
-  font-weight: 600;
-}
-
-.modal-copy {
-  margin:
-    0
-    30px
-    16px
-    0;
-
-  color: #7b8589;
-
-  font-size: 11px;
-
-  line-height: 1.55;
-}
-
-.request-options {
-  display: grid;
-
-  gap: 8px;
-}
-
-.request-options button {
-  min-height: 47px;
+  width: 36px;
+  height: 36px;
 
   display: flex;
 
   align-items: center;
+  justify-content: center;
 
-  justify-content: space-between;
-
-  padding:
-    13px
-    14px;
+  padding: 0;
 
   border:
     1px solid
-    rgba(24, 50, 58, 0.08);
-
-  background: #fff;
-
-  border-radius: 14px;
-
-  text-align: left;
-
-  font-size: 12px;
-
-  transition:
-    background 0.18s ease,
-    transform 0.18s ease;
-}
-
-.request-options button:hover {
-  background: #faf8f3;
-}
-
-.request-options button:active {
-  transform: scale(0.985);
-}
-
-.request-options button svg {
-  color: #999;
-}
-
-.future-note {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  margin-top: 14px;
-
-  color: #6d806f;
-
-  font-size: 9px;
-}
-
-.future-note > span {
-  width: 17px;
-  height: 17px;
-
-  display: grid;
-  place-items: center;
+    rgba(20, 35, 40, 0.08);
 
   border-radius: 50%;
 
-  background: #dfeae1;
+  background:
+    rgba(255, 255, 255, 0.82);
 
-  color: #4f8065;
+  color: #233d46;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.modal-close:hover {
+  background: #ffffff;
+
+  border-color:
+    rgba(20, 35, 40, 0.16);
+
+  transform: rotate(4deg);
+}
+
+.modal-close:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   MODAL ICON
+   ========================================================= */
+
+.modal-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: #f0e8d5;
+
+  color: #806b3d;
+
+  box-shadow:
+    inset
+    0
+    0
+    0
+    1px
+    rgba(128, 107, 61, 0.08);
+}
+
+
+/* =========================================================
+   MODAL EYEBROW
+   ========================================================= */
+
+.request-modal .eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #8a7650;
+}
+
+
+/* =========================================================
+   MODAL TITLE
+   ========================================================= */
+
+.request-modal h2 {
+  margin:
+    0
+    42px
+    14px
+    0;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  color: #203c45;
+
+  font-size: 30px;
+
+  line-height: 1.12;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   MODAL MESSAGE
+   ========================================================= */
+
+.request-modal .modal-copy {
+  max-width: 370px;
+
+  margin: 0;
+
+  color: #667277;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.request-modal .modal-copy strong {
+  color: #203c45;
 
   font-weight: 700;
 }
 
-@keyframes sheet {
+
+/* =========================================================
+   MODAL SERVICE NOTE
+   ========================================================= */
+
+.request-modal .future-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-top: 24px;
+
+  padding:
+    14px
+    16px;
+
+  border-radius: 14px;
+
+  background: #f3f5f0;
+
+  border:
+    1px solid
+    rgba(82, 105, 77, 0.10);
+
+  color: #4e6652;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  font-weight: 500;
+}
+
+.request-modal .future-note > span:first-child {
+  flex: 0 0 auto;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dfeade;
+
+  color: #55705a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.request-modal .future-note > span:last-child {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MODAL ANIMATIONS
+   ========================================================= */
+
+@keyframes modalBackdropIn {
   from {
-    transform: translateY(14px);
-    opacity: 0.7;
+    opacity: 0;
   }
 
   to {
-    transform: none;
     opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(14px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
   }
 }
 
@@ -2472,6 +2579,7 @@ footer i {
   border-radius: 14px;
 
   display: grid;
+
   place-items: center;
 
   background: var(--navy);
@@ -2625,6 +2733,7 @@ footer i {
   border-radius: 11px;
 
   display: grid;
+
   place-items: center;
 
   background: #eee7d8;
@@ -2743,6 +2852,7 @@ footer i {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 7px;
@@ -2864,6 +2974,7 @@ footer i {
   border-radius: 11px;
 
   display: grid;
+
   place-items: center;
 
   background: #eee7d8;
@@ -2924,6 +3035,7 @@ footer i {
     8px;
 
   display: grid;
+
   place-items: center;
 
   cursor: pointer;
@@ -3051,11 +3163,13 @@ footer i {
 
 .admin-place-image {
   width: 145px;
+
   min-height: 180px;
 
   flex: 0 0 145px;
 
   display: grid;
+
   place-items: center;
 
   overflow: hidden;
@@ -3152,6 +3266,7 @@ footer i {
   height: 31px;
 
   display: grid;
+
   place-items: center;
 
   border:
@@ -3271,6 +3386,7 @@ footer i {
   flex: 0 0 33px;
 
   display: grid;
+
   place-items: center;
 
   border:
@@ -3672,6 +3788,7 @@ footer i {
   border-radius: 11px;
 
   display: grid;
+
   place-items: center;
 
   margin-bottom: 4px;
@@ -3774,6 +3891,7 @@ footer i {
   border-radius: 11px;
 
   display: grid;
+
   place-items: center;
 
   background: #e9f0ed;
@@ -3804,13 +3922,17 @@ footer i {
    ========================================================= */
 
 @media (max-width: 900px) {
+
   .admin-navigation {
     grid-template-columns:
       repeat(2, 1fr);
   }
+
 }
 
+
 @media (max-width: 760px) {
+
   .admin-manager-toolbar {
     align-items: flex-start;
 
@@ -3822,9 +3944,12 @@ footer i {
 
     flex-basis: 110px;
   }
+
 }
 
+
 @media (max-width: 700px) {
+
   .admin-shell {
     padding:
       20px
@@ -3848,6 +3973,7 @@ footer i {
       1fr
       1fr;
   }
+
 }
 
 
@@ -3859,6 +3985,7 @@ footer i {
 
   .page-shell {
     padding-left: 15px;
+
     padding-right: 15px;
   }
 
@@ -3910,7 +4037,7 @@ footer i {
 
     padding:
       10px
-      10px; 
+      10px;
   }
 
   .quick-action-icon {
@@ -3941,10 +4068,6 @@ footer i {
 
   .section-copy small {
     font-size: 10px;
-  }
-
-  .notice-card {
-    padding: 14px;
   }
 
   .places-preview-card {
@@ -3995,6 +4118,7 @@ footer i {
 
   .premium-accordion-body {
     padding-left: 13px;
+
     padding-right: 13px;
   }
 
@@ -4072,6 +4196,7 @@ footer i {
 
   .admin-place-image {
     width: 100%;
+
     height: 150px;
 
     min-height: 150px;
@@ -4101,6 +4226,7 @@ footer i {
     bottom: -18px;
 
     padding-top: 12px;
+
     padding-bottom: 4px;
 
     background: #f8f7f2;
@@ -4110,31 +4236,68 @@ footer i {
     flex: 1;
   }
 
+
+  /* =======================================================
+     REQUEST MODAL MOBILE
+     ======================================================= */
+
   .modal-backdrop {
-    padding: 0;
+    align-items: flex-end;
+
+    padding: 12px;
   }
 
   .request-modal {
     width: 100%;
 
-    border-radius:
-      24px
-      24px
-      0
-      0;
+    max-height:
+      calc(100vh - 24px);
 
     padding:
-      21px
-      18px
+      26px
+      22px
       22px;
+
+    border-radius: 22px;
   }
+
+  .modal-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+  }
+
+  .request-modal h2 {
+    font-size: 27px;
+
+    margin-right: 36px;
+  }
+
+  .request-modal .modal-copy {
+    font-size: 13.5px;
+
+    line-height: 1.7;
+  }
+
+  .request-modal .future-note {
+    margin-top: 20px;
+  }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 420px) {
 
   .page-shell {
     padding-left: 13px;
+
     padding-right: 13px;
   }
 
@@ -4225,6 +4388,30 @@ footer i {
   .place-actions {
     flex-direction: column;
   }
+
+  /* Request modal */
+
+  .modal-backdrop {
+    padding: 8px;
+  }
+
+  .request-modal {
+    padding:
+      24px
+      18px
+      18px;
+
+    border-radius: 20px;
+  }
+
+  .request-modal h2 {
+    font-size: 25px;
+  }
+
+  .request-modal .modal-copy {
+    font-size: 13px;
+  }
+
 }
 
 
@@ -4236,6 +4423,7 @@ footer i {
 
   .page-shell {
     padding-left: 11px;
+
     padding-right: 11px;
   }
 
@@ -4254,6 +4442,7 @@ footer i {
   .request-modal h2 {
     font-size: 23px;
   }
+
 }
 
 
@@ -4293,7 +4482,9 @@ select:focus-visible {
 
     transition-duration: 0.01ms !important;
   }
+
 }
+
 
 /* =========================================================
    ADMIN AUTHENTICATION
@@ -4301,26 +4492,40 @@ select:focus-visible {
 
 .admin-auth-shell {
   width: min(100%, 520px);
+
   min-height: 100vh;
+
   margin: 0 auto;
-  padding: 40px 20px 30px;
+
+  padding:
+    40px
+    20px
+    30px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 }
 
 .admin-login-card {
   padding: 30px;
 
-  background: rgba(255, 255, 255, 0.94);
+  background:
+    rgba(255, 255, 255, 0.94);
 
-  border: 1px solid rgba(24, 50, 58, 0.08);
+  border:
+    1px solid
+    rgba(24, 50, 58, 0.08);
 
   border-radius: 22px;
 
   box-shadow:
-    0 18px 55px rgba(23, 50, 61, 0.08);
+    0
+    18px
+    55px
+    rgba(23, 50, 61, 0.08);
 }
 
 .admin-login-icon {
@@ -4328,6 +4533,7 @@ select:focus-visible {
   height: 48px;
 
   display: grid;
+
   place-items: center;
 
   margin-bottom: 20px;
@@ -4340,11 +4546,17 @@ select:focus-visible {
 }
 
 .admin-login-card h1 {
-  margin: 7px 0 8px;
+  margin:
+    7px
+    0
+    8px;
 
   color: var(--navy);
 
-  font-family: "Times New Roman", Times, serif;
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
 
   font-size: 28px;
 
@@ -4354,7 +4566,10 @@ select:focus-visible {
 }
 
 .admin-login-description {
-  margin: 0 0 22px;
+  margin:
+    0
+    0
+    22px;
 
   color: var(--muted);
 
@@ -4388,9 +4603,13 @@ select:focus-visible {
 .admin-login-error {
   margin-bottom: 15px;
 
-  padding: 10px 12px;
+  padding:
+    10px
+    12px;
 
-  border: 1px solid rgba(166, 83, 78, 0.18);
+  border:
+    1px solid
+    rgba(166, 83, 78, 0.18);
 
   border-radius: 10px;
 
@@ -4426,7 +4645,10 @@ select:focus-visible {
 .admin-back-home {
   display: block;
 
-  margin: 18px auto 0;
+  margin:
+    18px
+    auto
+    0;
 
   padding: 5px;
 
@@ -4515,10 +4737,12 @@ select:focus-visible {
 }
 
 .admin-spinner {
-  animation: admin-spin 0.9s linear infinite;
+  animation:
+    admin-spin 0.9s linear infinite;
 }
 
 @keyframes admin-spin {
+
   from {
     transform: rotate(0deg);
   }
@@ -4526,6 +4750,7 @@ select:focus-visible {
   to {
     transform: rotate(360deg);
   }
+
 }
 
 
@@ -4537,11 +4762,15 @@ select:focus-visible {
 
   .admin-auth-shell {
     padding:
-      25px 14px;
+      25px
+      14px;
   }
 
   .admin-login-card {
-    padding: 23px 19px;
+    padding:
+      23px
+      19px;
+
     border-radius: 19px;
   }
 
