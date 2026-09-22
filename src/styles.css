@@ -4789,3 +4789,305 @@ select:focus-visible {
   }
 
 }
+/* =========================================================
+   HOTEL BRAND HEADER
+   ========================================================= */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding:
+    0
+    3px
+    24px;
+}
+
+
+/* =========================================================
+   BRAND LOCKUP
+   ========================================================= */
+
+.brand-lockup {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   F CIRCLE
+   ========================================================= */
+
+.brand-lockup .brand-mark {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+  min-height: 58px;
+
+  flex: 0 0 58px;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  box-sizing: border-box;
+
+  border:
+    1.5px solid
+    #b59b63;
+
+  border-radius: 50%;
+
+  background:
+    transparent;
+
+  color:
+    #806d46;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  line-height: 1 !important;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* Force anything inside the F circle to center */
+.brand-lockup .brand-mark span,
+.brand-lockup .brand-mark strong,
+.brand-lockup .brand-mark b {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  line-height: 1;
+
+  text-align: center;
+
+  font-size: inherit;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.brand-lockup > div:not(.brand-mark) {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* Hotel name */
+.brand-lockup > div:not(.brand-mark) strong {
+  display: block;
+
+  max-width: none;
+
+  overflow: visible;
+
+  white-space: nowrap;
+
+  margin: 0;
+
+  color:
+    #19343d;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* Guest directory */
+.brand-lockup > div:not(.brand-mark) span {
+  display: block;
+
+  margin-top: 7px;
+
+  color:
+    #927c4f;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GUEST ASSISTANT
+   ========================================================= */
+
+.secure-pill {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  border:
+    1px solid
+    rgba(24, 50, 58, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+  border-radius: 999px;
+
+  padding:
+    7px
+    10px;
+
+  font-size: 10px;
+
+  color: #6f797b;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+
+  background: #5b8b72;
+
+  display: inline-block;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .topbar {
+    padding-bottom: 16px;
+  }
+
+  .brand-lockup {
+    gap: 11px;
+  }
+
+  .brand-lockup .brand-mark {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+    min-height: 45px;
+
+    flex-basis: 45px;
+
+    font-size: 22px;
+  }
+
+  .brand-lockup > div:not(.brand-mark) strong {
+    max-width: 190px;
+
+    font-size: 15px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .brand-lockup > div:not(.brand-mark) span {
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .brand-lockup {
+    gap: 9px;
+  }
+
+  .brand-lockup .brand-mark {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    flex-basis: 40px;
+
+    font-size: 20px;
+  }
+
+  .brand-lockup > div:not(.brand-mark) strong {
+    max-width: 160px;
+
+    font-size: 13px;
+  }
+
+  .brand-lockup > div:not(.brand-mark) span {
+    font-size: 7px;
+
+    letter-spacing: 1.6px;
+  }
+
+}
+.brand-lockup .brand-mark {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
